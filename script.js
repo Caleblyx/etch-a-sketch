@@ -1,5 +1,3 @@
-const container = document.querySelector(".container")
-
 function createGrid(n) {
     s = 100/n;
     for (let i = 0; i < n; i++) {
@@ -10,15 +8,24 @@ function createGrid(n) {
             const box = document.createElement('div');
             box.style.width = s.toString() + "%";
             box.classList.add("box");
-            box.addEventListener('mouseover', changeBoxColor)
+            box.addEventListener('mouseover', colorBox);
             row.appendChild(box);
         }
         container.appendChild(row);
     }
 }
 
-function changeBoxColor(e) {
-    this.style.backgroundColor = "black"
+function colorBox(e) {
+    this.style.backgroundColor = color;
+}
+
+function erase(e){
+    if (color == "white") {
+        color = "black"
+    } else {
+        color = "white"
+    }
+    eraseButton.classList.toggle("selected");
 }
 
 function resetPrompt(e) {
@@ -33,7 +40,11 @@ function resetPrompt(e) {
     console.log(n);
     createGrid(n);
 }
-
-createGrid(100);
+let color = "black";
+const container = document.querySelector(".container")
 const resetButton = document.querySelector(".reset");
+const eraseButton = document.querySelector(".erase");
 resetButton.addEventListener("click", resetPrompt);
+eraseButton.addEventListener("click", e => erase())
+createGrid(100);
+
