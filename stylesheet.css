@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: #FFE5B4;
 }
 .container{
     border: 3px solid grey;
@@ -28,12 +29,13 @@ body {
     padding-top: 10px;
     background-color: #ADD8E6;
     border-radius: 10%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.19);
 }
 .title{
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
     font-size: 50px;
-    color: white;
+    color: black;
 }
 .mid-board{
     display:flex;
