@@ -49,16 +49,28 @@ body {
     justify-content: center;
     gap: 10px;
 }
-.erase,
-.reset {
+.setting{
     font-size: 32px;
     font-family: 'Shadows Into Light', cursive;
     background-color: #DCAE96;
     color: black;
     border-color: #DCAE96;
     border-radius: 10%;
+    word-wrap: break-word;
+    width: 120px;
+}
+
+.setting:hover {
+    background-color: #8C4F2F;
 }
 
 .selected {
     background-color: #8C4F2F;
+}
+
+.instructions{
+    font-size: 28px;
+    font-family: 'Shadows Into Light', cursive;  
+    width: 700px;
+    word-wrap: break-word;
 }
